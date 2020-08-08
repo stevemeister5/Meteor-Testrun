@@ -15,6 +15,16 @@
                 :info="`${Math.round(errorRate * 100) }%`"
             />
         </section>
+        <section class="list">
+            <div 
+                v-for="item of measures"
+                :key="item._id"
+            >
+                <div class="date">{{ item.date.toLocaleString() }}</div>
+                <div class="error">{{ item.error ? 'Error' : '' }}</div>
+                <div class="value">{{ item.value }}</div>
+            </div>
+        </section>
     </div>
 </template>
 
@@ -24,7 +34,13 @@
 
 import { Measures } from '../../lib/collections'
 
+import ProductionIndicator from './ProductionIndicator'
+
 export default {
+
+    components: {
+        ProductionIndicator,
+    },
 
     data () {
         return {
