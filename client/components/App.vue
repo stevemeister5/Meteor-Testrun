@@ -5,6 +5,7 @@
             <router-link :to="{ name: 'dashboard' }" exact>Dashboard</router-link>
             <router-link :to="{ name: 'generate' }">Measure</router-link>
         </nav>
+        
     </div>
 </template>
 
