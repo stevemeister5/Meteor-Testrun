@@ -1,7 +1,10 @@
 <!-- client/components/App.vue -->
 <template>
     <div id="#app">
-        <h1>Meteor</h1>
+        <nav>
+            <router-link :to="{ name: 'dashboard' }" exact>Dashboard</router-link>
+            <router-link :to="{ name: 'generate' }">Measure</router-link>
+        </nav>
     </div>
 </template>
 
